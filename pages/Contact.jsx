@@ -4,7 +4,7 @@ import Header from "../src/component/Header";
 import { useState } from "react";
 import Modal from "../src/component/Modal";
 import { useNavigate } from "react-router-dom";
-
+import { motion } from "framer-motion";
 function Contact() {
   const navigate = useNavigate();
   const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -13,7 +13,18 @@ function Contact() {
       <div className="hidden lg:block">
         <Header />
       </div>
-      <section className="relative contact flex flex-col-reverse items-center lg:flex-row justify-center gap-20">
+      <motion.section
+        initial={{ y: "100%", opacity: 0 }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 1,
+            ease: "easeInOut",
+          },
+        }}
+        className="relative contact flex flex-col-reverse items-center lg:flex-row justify-center gap-20"
+      >
         <div
           className={` fixed lg:absolute top-0 left-0 right-0 bottom-0 w-full h-full bg-modalBg z-[99] ${
             showSuccessModal ? "block" : "hidden"
@@ -109,7 +120,7 @@ function Contact() {
           subText="You´ll recieve a Feedback soon from us via Email.You contact our support for more Info."
           showModal={showSuccessModal}
         />
-      </section>
+      </motion.section>
     </>
   );
 }

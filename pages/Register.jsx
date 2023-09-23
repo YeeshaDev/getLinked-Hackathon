@@ -4,7 +4,7 @@ import Modal from "../src/component/Modal";
 //import Modal from '../src/component/Modal'
 import RegisterForm from "../src/component/RegisterForm";
 import Header from "../src/component/Header";
-
+import { motion } from "framer-motion";
 export default function Register() {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   return (
@@ -12,7 +12,18 @@ export default function Register() {
       <div className="hidden lg:block">
         <Header />
       </div>
-      <section className="relative register flex flex-col lg:flex-row lg:gap-20 py-10">
+      <motion.section
+        initial={{ y: "100%", opacity: 0 }}
+        animate={{
+          opacity: 1,
+          y: 0,
+          transition: {
+            duration: 1,
+            ease: "easeInOut",
+          },
+        }}
+        className="relative register flex flex-col lg:flex-row lg:gap-20 py-10"
+      >
         <div className="purple-flare w-full lg:w-[50%] h-[300px] lg:h-full top-40 lg:top-3 -left-[100px] lg:-left-[20rem]  "></div>
         <div className="purple-flare w-full lg:w-[50%] h-[300px] lg:h-full -bottom-28  right-1 "></div>
         <div
@@ -23,9 +34,19 @@ export default function Register() {
         <h3 className="lg:hidden block text-purple font-semibold text-[24px] sm:text-[32px] text-start ml-10">
           Register
         </h3>
-        <figure className="lg:max-w-[50%] w-full lg:w-[500px]">
+        <motion.figure
+          initial={{ x: "-100%" }}
+          animate={{
+            x: 0,
+            transition: {
+              duration: 1,
+              ease: "easeInOut",
+            },
+          }}
+          className="lg:max-w-[50%] w-full lg:w-[500px]"
+        >
           <img src={RegisterImg} alt="" />
-        </figure>
+        </motion.figure>
         <>
           <RegisterForm setShowSuccessModal={setShowSuccessModal} />
           <Modal
@@ -34,7 +55,7 @@ export default function Register() {
             showModal={showSuccessModal}
           />
         </>
-      </section>
+      </motion.section>
     </>
   );
 }

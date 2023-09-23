@@ -62,7 +62,6 @@ function RegisterForm({ setShowSuccessModal }) {
       };
 
       // Sending an email after registration using emailJs
-      
 
       emailjs
         .send(
