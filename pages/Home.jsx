@@ -35,8 +35,9 @@ export default function Home() {
         <Prizes />
         <Partners />
         <Terms />
-        <Footer />
+       
       </motion.div>
+      <Footer />
     </div>
   );
 }
