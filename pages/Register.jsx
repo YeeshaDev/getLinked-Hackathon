@@ -16,7 +16,7 @@ export default function Register() {
         <div className="purple-flare w-full lg:w-[50%] h-[300px] lg:h-full top-40 lg:top-3 -left-[100px] lg:-left-[20rem]  "></div>
         <div className="purple-flare w-full lg:w-[50%] h-[300px] lg:h-full -bottom-28  right-1 "></div>
         <div
-          className={`absolute top-0 left-0 right-0 bottom-0 w-full h-full bg-modalBg z-[99] ${
+          className={` fixed lg:absolute top-0 left-0 right-0 bottom-0 w-full h-full bg-modalBg z-[99] ${
             showSuccessModal ? "block" : "hidden"
           }`}
         ></div>

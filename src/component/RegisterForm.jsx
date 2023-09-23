@@ -62,23 +62,11 @@ function RegisterForm({ setShowSuccessModal }) {
       };
 
       // Sending an email after registration using emailJs
-      emailjs
-        .send(
-          "service_5hulf9r",
-          "template_nk9rq5h",
-          emailParams,
-          "Sb11MyaNpQEgE-cBn",
-        )
-        .then((response) => {
-          console.log("Email sent:", response);
-        })
-        .catch((error) => {
-          console.error("Email sending failed:", error);
-        });
+      
 
       emailjs
         .send(
-          import.meta.env.VITE_SERVICE_ID,
+          import.meta.env.VITE_EMAIL_SERVICE_ID,
           import.meta.env.VITE_TEMPLATE_ID,
           emailParams,
           import.meta.env.VITE_EMAIL_KEY,

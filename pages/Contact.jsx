@@ -15,7 +15,7 @@ function Contact() {
       </div>
       <section className="relative contact flex flex-col-reverse items-center lg:flex-row justify-center gap-20">
         <div
-          className={`absolute top-0 left-0 right-0 bottom-0 w-full h-full bg-modalBg z-[99] ${
+          className={` fixed lg:absolute top-0 left-0 right-0 bottom-0 w-full h-full bg-modalBg z-[99] ${
             showSuccessModal ? "block" : "hidden"
           }`}
         ></div>
