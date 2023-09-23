@@ -1,7 +1,5 @@
-
-
-import  { useState } from 'react';
-import { FaPlus, FaMinus } from 'react-icons/fa';
+import { useState } from "react";
+import { FaPlus, FaMinus } from "react-icons/fa";
 
 const Accordion = ({ title, content }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -16,9 +14,13 @@ const Accordion = ({ title, content }) => {
         className="flex justify-between items-center py-4 cursor-pointer border-b border-b-purple transition-all duration-500"
         onClick={toggleAccordion}
       >
-        <div className='px-2'>{title}</div>
+        <div className="px-2">{title}</div>
         <div>
-          {isOpen ? <FaMinus className='text-purple' /> : <FaPlus className='text-purple' />}
+          {isOpen ? (
+            <FaMinus className="text-purple" />
+          ) : (
+            <FaPlus className="text-purple" />
+          )}
         </div>
       </div>
       {isOpen && (

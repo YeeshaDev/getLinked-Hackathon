@@ -10,22 +10,20 @@ import Rules from "../src/component/Rules";
 import Terms from "../src/component/Terms";
 import Timeline from "../src/component/TimeLine";
 
-
 export default function Home() {
-    return (
-        <div>
-            <Header />
-            <Hero/>
-            <BigIdea />
-            <Rules />
-            <Criteria />
-            <Faqs />
-            <Timeline />
-            <Prizes />
-            <Partners />
-             <Terms />
-             <Footer />
-            
-        </div>
-    )
+  return (
+    <div>
+      <Header />
+      <Hero />
+      <BigIdea />
+      <Rules />
+      <Criteria />
+      <Faqs />
+      <Timeline />
+      <Prizes />
+      <Partners />
+      <Terms />
+      <Footer />
+    </div>
+  );
 }

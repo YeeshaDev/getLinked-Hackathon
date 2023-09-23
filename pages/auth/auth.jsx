@@ -19,14 +19,15 @@ export const registerUser = async (userData) => {
   }
 };
 
-
 // Function to handle user login
 export const contactForm = async (credentials) => {
   try {
-    const response = await axios.post(`${API_URL}/hackathon/contact-form`, credentials);
+    const response = await axios.post(
+      `${API_URL}/hackathon/contact-form`,
+      credentials,
+    );
     return response.data;
   } catch (error) {
     throw error.response.data; // Handle login errors here
   }
 };
-
