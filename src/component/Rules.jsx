@@ -1,5 +1,6 @@
 import RulesImg from "../assets/rules.png";
 import { motion } from "framer-motion";
+import WhiteStar from "../assets/gray-star.png";
 function Rules() {
   return (
     <motion.section
@@ -14,6 +15,10 @@ function Rules() {
       }}
       className="relative"
     >
+      <img
+        src={WhiteStar}
+        className=" star top-[70%] lg:top-28 left-[90%] lg:left-[30%]  w-5"
+      />
       <div className="purple-flare w-full lg:w-[50%] h-[300px] lg:h-full top-[1rem] lg:top-3 left-[-40%] lg:left-[-70px]  !opacity-[0.35]"></div>
       <div className="purple-flare w-full lg:w-[30%] h-[300px] lg:h-full bottom-32 lg:bottom-[-10rem]  right-1 "></div>
       <div className="flex flex-col-reverse lg:flex-row items-center justify-center gap-7 lg:gap-10">

@@ -1,6 +1,14 @@
+import WhiteStar from "../assets/white-star.png";
+import PurpleStar from "../assets/purple-star.png";
+import GrayStar from "../assets/gray-star.png";
+
 function Footer() {
   return (
-    <footer className="bg-footerBg py-10 px-12 flex flex-col items-center justify-center">
+    <footer className=" relative bg-footerBg py-10 px-12 flex flex-col items-center justify-center">
+      <img src={WhiteStar} alt="" className="star top-[7%] left-[5%]  " />
+      <img src={WhiteStar} alt="" className="star top-[70%] left-[90%]  " />
+      <img src={GrayStar} alt="" className="star top-[40%] left-[70%]  " />
+      <img src={PurpleStar} alt="" className="star top-[70%] left-[50%]  " />
       <section className="flex flex-col lg:flex-row lg:items-center gap-16">
         <article className="lg:max-w-[50%]">
           <h1 className="text-white font-bold text-[20px] md:text-[36px]">
@@ -18,7 +26,7 @@ function Footer() {
         <article className="flex flex-col lg:flex-row gap-10">
           <div>
             <h4 className="font-bold text-purple text-xl mb-5">Useful Links</h4>
-            <ul className="flex flex-col gap-y-5">
+            <ul className="flex flex-col gap-'y-5">
               <li>
                 <a href="">Timelines</a>
               </li>

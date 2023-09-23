@@ -1,5 +1,7 @@
 import CriteriaImg from "../assets/criteria.png";
 import { motion } from "framer-motion";
+import WhiteStar from "../assets/white-star.png";
+import GrayStar from "../assets/gray-star.png";
 export default function Criteria() {
   return (
     <motion.section
@@ -13,6 +15,14 @@ export default function Criteria() {
       }}
       className="relative"
     >
+      <img
+        src={WhiteStar}
+        className=" star top-[93%] left-[93%] lg:top-[80%] lg:left-[40%] w-5"
+      />
+      <img
+        src={GrayStar}
+        className=" star top-[40%] left-[50%] lg:top-[80%] lg:left-[24%] w-5"
+      />
       <div className="purple-flare w-full lg:w-[50%] h-[300px] lg:h-full top-[20rem] lg:top-3 left-[-70px]  !opacity-[0.35]"></div>
       <div className="purple-flare w-full lg:w-[50%] h-[300px] lg:h-full lg:-bottom-[20rem] -bottom-[0%]  right-1 "></div>
       <div className="flex flex-col-reverse lg:flex-row-reverse items-center justify-center gap-10">

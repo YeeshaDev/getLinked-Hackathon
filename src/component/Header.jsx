@@ -67,8 +67,8 @@ export default function Header() {
                 <span>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="19"
-                    height="14"
+                    width="20"
+                    height="20"
                     viewBox="0 0 19 14"
                     fill="none"
                   >
@@ -86,7 +86,7 @@ export default function Header() {
               className={`lg:hidden  pb-12 absolute gap-8   lg:z-auto z-[1] left-0 w-full  pl-9 transition-all duration-500 ease-in ${
                 open
                   ? "top-[0] bg-mainBg shadow-lg  z-[99]"
-                  : "top-[-350px] bg-mainBg z-[999]"
+                  : "top-[-390px] bg-mainBg z-[999]"
               }`}
             >
               <li className="!mt-20">

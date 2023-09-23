@@ -1,5 +1,6 @@
 import PartnersImg from "../assets/partners.png";
 import { motion } from "framer-motion";
+import PurpleStar from "../assets/purple-star.png";
 export default function Partners() {
   return (
     <motion.section
@@ -12,7 +13,11 @@ export default function Partners() {
           ease: "easeInOut",
         },
       }}
+      className="relative"
     >
+      <img src={PurpleStar} alt="" className="star top-[43%] left-[50%]" />
+
+      <img src={PurpleStar} alt="" className="star top-[85%] left-[50%]" />
       <div className="flex flex-col items-center justify-center mt-10">
         <article className="flex flex-col items-center justify-center ">
           <h3>Partners and Sponsors</h3>

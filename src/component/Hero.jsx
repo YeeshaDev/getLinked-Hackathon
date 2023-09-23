@@ -4,6 +4,8 @@ import Splash from "../assets/splash.png";
 import Chain from "../assets/chain.png";
 import Curve from "../assets/pink-curve.svg";
 import { motion } from "framer-motion";
+import Timer from "./Timer";
+import WhiteStar from "../assets/white-star.png";
 
 //import Flare from '../assets/purple-flare.png'
 function Hero() {
@@ -22,6 +24,10 @@ function Hero() {
       <div className="flex flex-col lg:flex-row items-center mt-5 md:mt-16 lg:mt-1">
         <article className="relative flex flex-col items-center lg:items-start justify-center lg:justify-start z-[10]">
           <div className="purple-flare top-0 flex items-center justify-center left-[30%] translate-x-[-50%] translate-y-[-50%] w-full h-full"></div>
+          <img
+            src={WhiteStar}
+            className=" star absolute top-12 lg:-top-10 left-10 w-7 h-7"
+          />
           <div className="relative lg:mt-5 mb-16 lg:mb-24 lg:hidden ">
             <h3 className='text-[16px] sm:text-[30px] whitespace-nowrap  italic font-["Inter"] font-extrabold '>
               Igniting a Revolution in HR Innovation
@@ -37,13 +43,16 @@ function Hero() {
               getlinked Tech <br /> Hackathon{" "}
               <span className="text-purple">1.0</span>{" "}
             </h2>
-            <p className="lg:text-[20px] text-[13px] sm:text-[16px] w-[90%] lg:w-[90%] mx-auto lg:mx-0">
+            <p className="lg:text-[20px] text-[13px] sm:text-[16px] w-[80%] sm:w-[90%] lg:w-[90%] mx-auto lg:mx-0">
               Participate in getlinked tech Hackathon 2023 stand a chance to win
               a Big prize
             </p>
             <button className="mx-auto lg:mx-0 flex items-center justify-center">
               Register
             </button>
+
+            <Timer />
+
             <figure className="absolute -top-8 md:-top-14 lg:right-20 w-[30px] md:w-[50px] right-[30%] md:right-[32%]">
               <img src={Bulb} alt="" className="w-full" />
             </figure>
@@ -89,6 +98,7 @@ function Hero() {
           </div>
         </article>
       </div>
+
       <hr />
     </motion.section>
   );

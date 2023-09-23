@@ -4,6 +4,7 @@ import Modal from "../src/component/Modal";
 //import Modal from '../src/component/Modal'
 import RegisterForm from "../src/component/RegisterForm";
 import Header from "../src/component/Header";
+import PurpleStar from "../src/assets/purple-star.png";
 import { motion } from "framer-motion";
 export default function Register() {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -24,6 +25,11 @@ export default function Register() {
         }}
         className="relative register flex flex-col lg:flex-row lg:gap-20 py-10"
       >
+        <img
+          src={PurpleStar}
+          alt=""
+          className="star top-[90%] lg:first-letter:top-[60%] right-[12%]"
+        />
         <div className="purple-flare w-full lg:w-[50%] h-[300px] lg:h-full top-40 lg:top-3 -left-[100px] lg:-left-[20rem]  "></div>
         <div className="purple-flare w-full lg:w-[50%] h-[300px] lg:h-full -bottom-28  right-1 "></div>
         <div

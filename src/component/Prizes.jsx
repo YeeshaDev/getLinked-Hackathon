@@ -1,6 +1,7 @@
 import Cup from "../assets/cup.png";
 import Rewards from "../assets/Rewards.png";
 import { motion } from "framer-motion";
+import WhiteStar from "../assets/white-star.png";
 //import Background from '../assets/flare-bg.png'
 export default function Prizes() {
   return (
@@ -16,6 +17,8 @@ export default function Prizes() {
         },
       }}
     >
+      <img src={WhiteStar} alt="" className="star top-[40%] left-[45%]  " />
+      <img src={WhiteStar} alt="" className="star top-[30%] left-[90%]  " />
       <div className="flare-bg"></div>
 
       <section className="flex flex-col items-center justify-between py-14">

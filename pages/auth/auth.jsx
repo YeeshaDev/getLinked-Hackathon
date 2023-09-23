@@ -11,20 +11,20 @@ export const registerUser = async (userData) => {
       `${API_URL}/hackathon/registration`,
       userData,
     );
-    console.log(response.data);
+    //console.log(response.data);
     return response.data;
   } catch (error) {
-    console.log(error.response.data);
+    //console.log(error.response.data);
     throw error.response.data; // Handle registration errors here
   }
 };
 
 // Function to handle user login
-export const contactForm = async (credentials) => {
+export const contactForm = async (contactData) => {
   try {
     const response = await axios.post(
       `${API_URL}/hackathon/contact-form`,
-      credentials,
+      contactData,
     );
     return response.data;
   } catch (error) {

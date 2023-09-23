@@ -2,34 +2,36 @@ import { useState } from "react";
 import { contactForm } from "../../pages/auth/auth";
 
 function ContactForm({ setShowSuccessModal }) {
-  const [credentials, setCredentials] = useState({
+  const [contactData, setContactData] = useState({
     first_name: "",
     email: "",
     message: "",
   });
-
+  const [error, setError] = useState(false);
   const handleInputChange = (e) => {
     const { name, value } = e.target;
-
-    setCredentials({
-      ...credentials,
+    const updatedErrors = { ...error, [name]: "" };
+    setContactData({
+      ...contactData,
       [name]: value,
     });
+    setError(updatedErrors);
   };
 
   const handleContactForm = async (e) => {
     e.preventDefault();
     try {
-      const response = await contactForm(credentials, {
+      const response = await contactForm(contactData, {
         headers: {
           "Content-Type": "application/json", // Important for sending file data
         },
       });
       setShowSuccessModal(true);
-      setTimeout(speakResponse(credentials.first_name), 1000);
+      setTimeout(speakResponse(contactData.first_name), 1000);
       console.log("Registration successful", response);
     } catch (error) {
-      console.log("Failed to submit", error);
+      //console.log("Failed to submit", error);
+      setError(error);
     }
   };
 
@@ -74,30 +76,48 @@ function ContactForm({ setShowSuccessModal }) {
         Email us below to any question related to our event
       </p>
       <form action="" className="flex flex-col  gap-y-7 mt-8">
-        <input
-          type="text"
-          name="first_name"
-          value={credentials.first_name}
-          placeholder="First Name"
-          onChange={handleInputChange}
-          className="border border-solid border-white px-8 h-12 w-full rounded-md bg-transparent outline-0 placeholder:text-white placeholder:font-normal"
-        />
-        <input
-          type="text"
-          name="email"
-          value={credentials.email}
-          placeholder="Email"
-          onChange={handleInputChange}
-          className="border border-solid border-white px-8 h-12 w-full rounded-md bg-transparent outline-0 placeholder:text-white placeholder:font-normal"
-        />
-        <textarea
-          type="text"
-          name="message"
-          value={credentials.message}
-          placeholder="Message"
-          onChange={handleInputChange}
-          className=" border border-solid border-white px-4 pt-2  h-28 w-full rounded-md bg-transparent outline-0 mt-0 placeholder:text-white placeholder:font-normal "
-        />
+        <>
+          <input
+            type="text"
+            name="first_name"
+            value={contactData.first_name}
+            placeholder="First Name"
+            onChange={handleInputChange}
+            className="border border-solid border-white px-8 h-12 w-full rounded-md bg-transparent outline-0 placeholder:text-white placeholder:font-normal"
+          />
+          {error && error.first_name && (
+            <div className="text-red-500">{error.first_name}</div>
+          )}
+        </>
+
+        <>
+          <input
+            type="text"
+            name="email"
+            value={contactData.email}
+            placeholder="Email"
+            onChange={handleInputChange}
+            className="border border-solid border-white px-8 h-12 w-full rounded-md bg-transparent outline-0 placeholder:text-white placeholder:font-normal"
+          />
+          {error && error.email && (
+            <div className="text-red-500">{error.email}</div>
+          )}
+        </>
+
+        <>
+          <textarea
+            type="text"
+            name="message"
+            value={contactData.message}
+            placeholder="Message"
+            onChange={handleInputChange}
+            className=" border border-solid border-white px-4 pt-2  h-28 w-full rounded-md bg-transparent outline-0 mt-0 placeholder:text-white placeholder:font-normal "
+          />
+          {error && error.message && (
+            <div className="text-red-500">{error.message}</div>
+          )}
+        </>
+
         <button
           type="submit"
           onClick={handleContactForm}

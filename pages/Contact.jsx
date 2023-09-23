@@ -5,6 +5,9 @@ import { useState } from "react";
 import Modal from "../src/component/Modal";
 import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import PurpleStar from "../src/assets/purple-star.png";
+import WhiteStar from "../src/assets/white-star.png";
+import GrayStar from "../src/assets/gray-star.png";
 function Contact() {
   const navigate = useNavigate();
   const [showSuccessModal, setShowSuccessModal] = useState(false);
@@ -25,6 +28,22 @@ function Contact() {
         }}
         className="relative contact flex flex-col-reverse items-center lg:flex-row justify-center gap-20"
       >
+        <img
+          src={PurpleStar}
+          alt=""
+          className="star top-10 lg:top-20 left-8 lg:left-[20%]"
+        />
+        <img src={GrayStar} alt="" className="star top-[5%] left-[80%]" />
+        <img
+          src={WhiteStar}
+          alt=""
+          className="star top-[80%] lg:bottom-0 left-[83%]"
+        />
+        <img
+          src={PurpleStar}
+          alt=""
+          className="star bottom-16 left-8 lg:left-[40%]"
+        />
         <div
           className={` fixed lg:absolute top-0 left-0 right-0 bottom-0 w-full h-full bg-modalBg z-[99] ${
             showSuccessModal ? "block" : "hidden"

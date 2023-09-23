@@ -1,4 +1,5 @@
 import BigIdeaImg from "../assets/big-idea.png";
+import PurpleStar from "../assets/purple-star.png";
 import { motion } from "framer-motion";
 function BigIdea() {
   return (
@@ -12,7 +13,9 @@ function BigIdea() {
           ease: "easeInOut",
         },
       }}
+      className="relative"
     >
+      <img src={PurpleStar} className=" star top-20 right-20 w-5" />
       <div className="flex flex-col-reverse lg:flex-row-reverse items-center justify-center gap-10">
         <motion.article
           initial={{ opacity: 0 }}

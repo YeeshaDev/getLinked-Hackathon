@@ -2,6 +2,7 @@
 import Congrats from "../assets/congrats.png";
 import Wink from "../assets/wink1.png";
 import { Link } from "react-router-dom";
+import PurpleStar from "../assets/purple-star.png";
 function Modal({ showModal, heading, subText }) {
   return (
     <div
@@ -9,7 +10,9 @@ function Modal({ showModal, heading, subText }) {
         showModal ? "block" : "hidden"
       }`}
     >
-      <div className="border border-solid border-purple p-8 max-w-[400px]">
+      <div className="relative border border-solid border-purple p-8 max-w-[400px]">
+        <img src={PurpleStar} alt="" className="star -top-10 right-5 " />
+        <img src={PurpleStar} alt="" className="star -bottom-10 right-5 " />
         <figure>
           <img src={Congrats} alt="" />
         </figure>

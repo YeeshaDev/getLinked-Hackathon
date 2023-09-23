@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-
+import PurpleStar from "../assets/purple-star.png";
+import WhiteStar from "../assets/white-star.png";
 export default function Timeline() {
   return (
     <motion.section
@@ -11,8 +12,14 @@ export default function Timeline() {
           duration: 1,
         },
       }}
-      id="timeline"
+      id="timeline "
+      className="relative"
     >
+      <img src={PurpleStar} className=" star top-24 left-28  w-5" />
+      <img
+        src={WhiteStar}
+        className=" star top-[53%] lg:top-[75%] left-[90%]  w-5"
+      />
       <article className="flex flex-col items-center justify-center mb-12 lg:[3rem]">
         <h3 className="font-semibold mb-3">Timeline</h3>
         <p className="text-center lg:text-start">

@@ -1,4 +1,5 @@
 import FaqImg from "../assets/faq.png";
+import PurpleStar from "../assets/purple-star.png";
 import Accordion from "./Accordion";
 import { motion } from "framer-motion";
 export default function Faqs() {
@@ -13,7 +14,9 @@ export default function Faqs() {
           duration: 1,
         },
       }}
+      className="relative"
     >
+      <img src={PurpleStar} className=" star top-[5px] left-10  w-5" />
       <div className="flex flex-col lg:flex-row items-center justify-center gap-10">
         <article className="lg:max-w-[50%]">
           <h3 className="leading-tight font-bold whitespace-nowrap">

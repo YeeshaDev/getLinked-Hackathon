@@ -1,6 +1,8 @@
 import TermsImg from "../assets/terms.png";
 import GreenCheck from "../assets/green-check.svg";
 import { motion } from "framer-motion";
+import GrayStar from "../assets/gray-star.png";
+import PurpleStar from "../assets/purple-star.png";
 export default function Terms() {
   return (
     <motion.div
@@ -16,6 +18,14 @@ export default function Terms() {
       className="relative"
       id="overview"
     >
+      <img
+        src={GrayStar}
+        className=" star top-[0] lg:top-0 left-[75%] lg:left-[50%]   w-5"
+      />
+      <img
+        src={PurpleStar}
+        className=" star top-[70%] left-[75%] lg:left-[55%]   w-4 h-4"
+      />
       <div className="flare-bg"></div>
       <section className="flex flex-col lg:flex-row items-center justify-center lg:gap-10 mt-10">
         <article className="lg:max-w-[50%] flex flex-col items-center ">
