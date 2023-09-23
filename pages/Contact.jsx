@@ -12,8 +12,8 @@ function Contact() {
   const navigate = useNavigate();
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   return (
-    <>
-      <div className="hidden lg:block">
+    <div className="relative">
+      <div className="relative hidden lg:block">
         <Header />
       </div>
       <motion.section
@@ -140,7 +140,7 @@ function Contact() {
           showModal={showSuccessModal}
         />
       </motion.section>
-    </>
+    </div>
   );
 }
 

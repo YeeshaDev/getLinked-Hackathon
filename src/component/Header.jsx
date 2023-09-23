@@ -12,7 +12,7 @@ export default function Header() {
     setOpen(false);
   }, [path]);
   return (
-    <header className=" py-3 ">
+    <header className=" py-3 relative z-50">
       {/* DESKTOP Navigation */}
       <nav className=" hidden lg:flex items-center justify-between px-5 mx-10">
         <Link to="/">
@@ -56,7 +56,7 @@ export default function Header() {
         <div className="flex flex-col items-center justify-between gap-10">
           <div
             onClick={() => setOpen(!open)}
-            className="text-3xl absolute z-[999] text-white right-8 top-6 cursor-pointer lg:hidden "
+            className="text-3xl absolute z-[99] text-white right-8 top-6 cursor-pointer lg:hidden "
           >
             <div>
               {open ? (
@@ -85,8 +85,8 @@ export default function Header() {
             <ul
               className={`lg:hidden  pb-12 absolute gap-8   lg:z-auto z-[1] left-0 w-full  pl-9 transition-all duration-500 ease-in ${
                 open
-                  ? "top-[0] bg-mainBg shadow-lg  z-[99]"
-                  : "top-[-390px] bg-mainBg z-[999]"
+                  ? "top-[0] bg-mainBg shadow-lg  z-[50]"
+                  : "top-[-390px] bg-mainBg z-[99]"
               }`}
             >
               <li className="!mt-20">

@@ -10,7 +10,7 @@ export default function Register() {
   const [showSuccessModal, setShowSuccessModal] = useState(false);
   return (
     <>
-      <div className="hidden lg:block">
+      <div className="relative hidden lg:block">
         <Header />
       </div>
       <motion.section

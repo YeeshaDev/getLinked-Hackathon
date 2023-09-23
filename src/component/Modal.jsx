@@ -6,7 +6,7 @@ import PurpleStar from "../assets/purple-star.png";
 function Modal({ showModal, heading, subText }) {
   return (
     <div
-      className={` absolute top-[23%] lg:top-[40%]  left-[50%] translate-x-[-50%] translate-y-[-50%]  p-8 z-[999] ${
+      className={` fixed top-[40%] lg:top-[40%]  left-[50%] translate-x-[-50%] translate-y-[-50%]  p-8 !z-[999] ${
         showModal ? "block" : "hidden"
       }`}
     >
