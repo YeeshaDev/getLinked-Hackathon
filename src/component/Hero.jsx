@@ -13,11 +13,11 @@ function Hero() {
       whileInView={{
         opacity: 1,
         transition: {
-          delay: 0.3,
+          delay: 0.5,
           duration: 1,
+          ease: "easeInOut",
         },
       }}
-      viewport={{ once: true }}
     >
       <div className="flex flex-col lg:flex-row items-center mt-5 md:mt-16 lg:mt-1">
         <article className="relative flex flex-col items-center lg:items-start justify-center lg:justify-start z-[10]">

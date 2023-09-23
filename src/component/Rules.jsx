@@ -7,11 +7,11 @@ function Rules() {
       whileInView={{
         opacity: 1,
         transition: {
-          delay: 0.3,
+          delay: 0.2,
           duration: 1,
+          ease: "easeInOut",
         },
       }}
-      viewport={{ once: true }}
       className="relative"
     >
       <div className="purple-flare w-full lg:w-[50%] h-[300px] lg:h-full top-[1rem] lg:top-3 left-[-40%] lg:left-[-70px]  !opacity-[0.35]"></div>

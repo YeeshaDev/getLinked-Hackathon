@@ -7,11 +7,11 @@ function BigIdea() {
       whileInView={{
         opacity: 1,
         transition: {
-          delay: 0.3,
-          duration: 1.5,
+          delay: 0.2,
+          duration: 1,
+          ease: "easeInOut",
         },
       }}
-      viewport={{ once: true }}
     >
       <div className="flex flex-col-reverse lg:flex-row-reverse items-center justify-center gap-10">
         <motion.article

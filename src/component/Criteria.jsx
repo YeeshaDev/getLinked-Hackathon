@@ -11,7 +11,6 @@ export default function Criteria() {
           duration: 1,
         },
       }}
-      viewport={{ once: true }}
       className="relative"
     >
       <div className="purple-flare w-full lg:w-[50%] h-[300px] lg:h-full top-[20rem] lg:top-3 left-[-70px]  !opacity-[0.35]"></div>

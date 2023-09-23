@@ -10,11 +10,11 @@ export default function Prizes() {
       whileInView={{
         opacity: 1,
         transition: {
-          delay: 0.3,
+          delay: 0.2,
           duration: 1,
+          ease: "easeInOut",
         },
       }}
-      viewport={{ once: true }}
     >
       <div className="flare-bg"></div>
 

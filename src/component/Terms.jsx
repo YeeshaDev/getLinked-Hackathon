@@ -8,11 +8,11 @@ export default function Terms() {
       whileInView={{
         opacity: 1,
         transition: {
-          delay: 0.3,
+          delay: 0.7,
           duration: 1,
+          ease: "easeInOut",
         },
       }}
-      viewport={{ once: true }}
       className="relative"
       id="overview"
     >

@@ -9,9 +9,9 @@ export default function Partners() {
         transition: {
           delay: 0.3,
           duration: 1,
+          ease: "easeInOut",
         },
       }}
-      viewport={{ once: true }}
     >
       <div className="flex flex-col items-center justify-center mt-10">
         <article className="flex flex-col items-center justify-center ">

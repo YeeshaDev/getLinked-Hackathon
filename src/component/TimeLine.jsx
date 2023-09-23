@@ -7,11 +7,10 @@ export default function Timeline() {
       whileInView={{
         opacity: 1,
         transition: {
-          delay: 0.3,
+          delay: 0.2,
           duration: 1,
         },
       }}
-      viewport={{ once: true }}
       id="timeline"
     >
       <article className="flex flex-col items-center justify-center mb-12 lg:[3rem]">

@@ -9,11 +9,10 @@ export default function Faqs() {
       whileInView={{
         opacity: 1,
         transition: {
-          delay: 0.3,
+          delay: 0.2,
           duration: 1,
         },
       }}
-      viewport={{ once: true }}
     >
       <div className="flex flex-col lg:flex-row items-center justify-center gap-10">
         <article className="lg:max-w-[50%]">

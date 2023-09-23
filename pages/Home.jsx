@@ -16,11 +16,11 @@ export default function Home() {
     <div>
       <Header />
       <motion.div
-        initial={{ y: "-100%", opacity: 0 }}
+        initial={{ y: "-100%" }}
         animate={{
-          opacity: 1,
           y: 0,
           transition: {
+            delay: 0.5,
             duration: 0.8,
             ease: "easeInOut",
           },
@@ -35,7 +35,6 @@ export default function Home() {
         <Prizes />
         <Partners />
         <Terms />
-       
       </motion.div>
       <Footer />
     </div>
